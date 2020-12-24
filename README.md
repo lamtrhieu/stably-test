@@ -1,13 +1,13 @@
-# Test
+# Stably Prime Test
 
 I have try to use golang to implement a simple html web app. 
 
 ## Usage 
 
-- Clone the code from git@github.com:lamtrhieu/stably-test.git
-- Build the docker file docker build -t my-go-app .
-- Check the image 
-- Run the image 
+- Clone the code from `git@github.com:lamtrhieu/stably-test.git`
+- Build the docker file <code>docker build -t myapp . </code>
+- Check the image is built successfully with  <code>docker images</code>
+- Run the image <code>docker run -p 8080:8081 -it myapp</code>
 - Access http://localhost/
 
 ## Approach 
