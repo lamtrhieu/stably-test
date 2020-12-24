@@ -1,16 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"html/template"
 	"net/http"
 )
 
+var tpl = template.Must(template.ParseFiles("index.html", "result.html"))
+
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Will show something here.")
+	tpl.Execute(w, nil)
 }
 
 func findPrimeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Will find prime here")
+	tpl.ExecuteTemplate(w, "result.html", 23)
 }
 
 func main() {
