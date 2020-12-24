@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h1>Find nearest Prime</h1>
+    <h1>Find nearest Prime</h1>
 
-{{if . }} <p style="color: red;">Invalid input. Please enter an integer and try again.</p> {{end}}
+    {{if . }} <p style="color: red;">Invalid input. Please enter an integer and try again.</p> {{end}}
 
-<form action="/findPrime" method="GET">
-  <label for="input">Enter an Integer:</label>
-  <input type="number" id="input" name="input">
-  <input type="submit">
-</form>
+    <form action="/findPrime" method="GET">
+        <label for="input">Enter an Integer:</label>
+        <input type="number" id="input" name="input">
+        <input type="submit">
+    </form>
 
 </body>
+
 </html>
