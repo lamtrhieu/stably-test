@@ -19,7 +19,7 @@ func TestIsPrime(t *testing.T) {
 }
 
 func TestFindPrime(t *testing.T) {
-	r := findPrime(55)
+	r := FindPrime(55)
 
 	if r != 53 {
 		t.Errorf("findPrime(55) return %d, should be 53", r)
