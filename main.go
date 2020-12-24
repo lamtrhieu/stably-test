@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
+	"strconv"
 )
 
 var tpl = template.Must(template.ParseFiles("index.html", "result.html"))
@@ -12,8 +14,18 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func findPrimeHandler(w http.ResponseWriter, r *http.Request) {
+	input := r.FormValue("input")
+	fmt.Println(input)
 
-	tpl.ExecuteTemplate(w, "result.html", 23)
+	i, error := strconv.Atoi(input)
+
+	if error != nil {
+		tpl.ExecuteTemplate(w, "index.html", error)
+	}
+
+	p := FindPrime(i)
+
+	tpl.ExecuteTemplate(w, "result.html", p)
 }
 
 func main() {
