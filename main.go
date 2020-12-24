@@ -12,6 +12,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func findPrimeHandler(w http.ResponseWriter, r *http.Request) {
+
 	tpl.ExecuteTemplate(w, "result.html", 23)
 }
 
