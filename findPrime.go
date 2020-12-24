@@ -13,6 +13,7 @@ func isPrime(input int) bool {
 	return true
 }
 
+//FindPrime public function to find the nearest prime
 func FindPrime(input int) int {
 	var r int
 	for i := input; i >= 2; i-- {
